@@ -10,6 +10,9 @@ const galleryImages = [
   { src: "/gallery/indian.png", alt: "" },
   { src: "/gallery/serving.jpeg", alt: "" },
   { src: "/gallery/stack.png", alt: "" },
+  { src: "/gallery/cheese.jpg", alt: "" },
+  { src: "/gallery/poke.jpg", alt: "" },
+  { src: "/gallery/muslinger.jpeg", alt: "" },
 ];
 
 export default function Gallery() {

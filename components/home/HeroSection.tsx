@@ -9,7 +9,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/hero-image.jpg"
+          src="/background.png"
           alt="Luups tableware collection"
           className="w-full h-full object-cover"
         />
@@ -17,20 +17,20 @@ export function HeroSection() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(100, 100, 100, 0.6) 0%, rgba(100, 100, 100, 0.4) 50%, rgba(100, 100, 100, 0.2) 100%)",
+              "linear-gradient(to right, rgba(140, 110, 90, 0.7) 0%, rgba(140, 110, 90, 0.6) 50%, rgba(140, 110, 90, 0.2) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(100, 100, 100, 0.3) 0%, transparent 50%, rgba(100, 100, 100, 0.4) 100%)",
+              "linear-gradient(to bottom, rgba(140, 110, 90, 0.3) 0%, transparent 50%, rgba(140, 110, 90, 0.4) 100%)",
           }}
         />
       </div>
 
       {/* Content */}
-      <div className="container relative mx-auto px-6 py-20">
+      <div className="relative pl-6 md:pl-12 lg:pl-16 pr-6 py-20">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,10 +94,11 @@ export function HeroSection() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white/30 hover:bg-white/10"
+              className="bg-white/10 hover:bg-white/20 border-white/30"
               style={{ 
                 color: "white",
-                borderColor: "rgba(255, 255, 255, 0.3)"
+                borderColor: "rgba(255, 255, 255, 0.3)",
+                backgroundColor: "rgba(255, 255, 255, 0.1)"
               }}
             >
               <Link to="/about" style={{ color: "white" }}>Our Story</Link>

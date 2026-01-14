@@ -15,14 +15,14 @@ export function SustainabilitySection() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(100, 100, 100, 0.6) 0%, rgba(100, 100, 100, 0.5) 50%, rgba(100, 100, 100, 0.4) 100%)",
+              "linear-gradient(to right, rgba(140, 110, 90, 0.7) 0%, rgba(140, 110, 90, 0.6) 50%, rgba(140, 110, 90, 0.2) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(100, 100, 100, 0.4) 0%, transparent 50%, rgba(100, 100, 100, 0.5) 100%)",
+              "linear-gradient(to bottom, rgba(140, 110, 90, 0.3) 0%, transparent 50%, rgba(140, 110, 90, 0.4) 100%)",
           }}
         />
       </div>

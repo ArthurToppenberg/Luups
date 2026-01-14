@@ -16,7 +16,7 @@ export function CTASection() {
             className="order-2 lg:order-1"
           >
             <img
-              src="/lifestyle-dining.jpg"
+              src="/muslinger.jpeg"
               alt="Luups products in use"
               className="w-full rounded-3xl shadow-elevated"
             />

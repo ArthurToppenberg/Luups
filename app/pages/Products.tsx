@@ -96,7 +96,7 @@ const Products = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="/products-tray.jpg"
+                src="/productsDisplay.jpeg"
                 alt="Luups trays stacked"
                 className="w-full rounded-3xl shadow-elevated"
               />

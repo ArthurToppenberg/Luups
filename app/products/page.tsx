@@ -99,7 +99,7 @@ export default function Products() {
       {/* Product Catalog */}
       <section className="py-20 bg-muted/10">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">
               Product Specifications
             </h2>
@@ -110,7 +110,7 @@ export default function Products() {
 
           <div className="space-y-20">
             {productCategories.map((category, idx) => (
-              <div key={category.category} id={category.category.toLowerCase().replace(/\s/g, '-')}>
+              <div key={category.category} id={category.category.toLowerCase().replace(/\s/g, '-')} className="scroll-mt-24">
                 <div className="flex items-center gap-4 mb-6">
                   <h3 className="font-display text-2xl font-semibold text-foreground">
                     {category.category}

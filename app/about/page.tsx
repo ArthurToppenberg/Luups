@@ -106,28 +106,6 @@ export default function About() {
                         </div>
                       </div>
                     </motion.div>
-
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.2 }}
-                      className="relative"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border-4 border-background shadow-card z-10">
-                          <Sparkles className="h-6 w-6 text-primary" />
-                        </div>
-                        <div className="pt-1">
-                          <div className="text-2xl font-display font-semibold text-foreground">
-                            Today
-                          </div>
-                          <div className="text-sm text-muted-foreground mt-1">
-                            Growing Impact
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
                   </div>
                 </div>
               </div>

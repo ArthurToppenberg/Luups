@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 
 const galleryImages = [
-  { src: "/gallery/efterar.jpeg", alt: "Efterår collection" },
-  { src: "/gallery/girl.png", alt: "Girl with Luups products" },
-  { src: "/gallery/granola.jpeg", alt: "Granola serving" },
-  { src: "/gallery/indian.png", alt: "Indian cuisine presentation" },
-  { src: "/gallery/serving.jpeg", alt: "Food serving presentation" },
-  { src: "/gallery/stack.png", alt: "Stacked Luups trays" },
+  { src: "/gallery/efterar.jpeg", alt: "" },
+  { src: "/gallery/girl.png", alt: "" },
+  { src: "/gallery/granola.jpeg", alt: "" },
+  { src: "/gallery/indian.png", alt: "" },
+  { src: "/gallery/serving.jpeg", alt: "" },
+  { src: "/gallery/stack.png", alt: "" },
 ];
 
 export default function Gallery() {

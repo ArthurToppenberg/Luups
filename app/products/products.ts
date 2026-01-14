@@ -268,8 +268,8 @@ export const productCategories: ProductCategory[] = [
           { name: "Sand", itemNumber: "LSA65" },
           { name: "Green", itemNumber: "LGG65" },
         ],
-        dimensions: "Catalog Error: Lists 33x36 cm",
-        weight: "Error: Lists 308 g",
+        dimensions: "Catalog 33x36 cm",
+        weight: "308 g",
         pkgUnit: "27 pcs",
         defaultImage: "/products/luups_gastro_tray_11_65_1.jpg",
         images: [

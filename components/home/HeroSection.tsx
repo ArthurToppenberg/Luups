@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -82,7 +82,7 @@ export function HeroSection() {
               }}
             >
               <Link 
-                to="/products"
+                href="/products"
                 style={{ color: "#EEEEEE" }}
                 className="flex items-center gap-2 font-medium"
               >
@@ -101,7 +101,7 @@ export function HeroSection() {
                 backgroundColor: "rgba(255, 255, 255, 0.1)"
               }}
             >
-              <Link to="/about" style={{ color: "white" }}>Our Story</Link>
+              <Link href="/about" style={{ color: "white" }}>Our Story</Link>
             </Button>
           </motion.div>
         </div>

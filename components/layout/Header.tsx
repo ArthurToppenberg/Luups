@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Instagram, Facebook } from "lucide-react";
 
@@ -14,14 +15,14 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const router = useRouter();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
             <motion.img
               src="/luups-logo.png"
               alt="Luups"
@@ -39,15 +40,15 @@ export function Header() {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`relative text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.path
+                  router.pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
               >
                 {link.name}
-                {location.pathname === link.path && (
+                {router.pathname === link.path && (
                   <motion.div
                     layoutId="activeNav"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
@@ -111,10 +112,10 @@ export function Header() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link
-                    to={link.path}
+                    href={link.path}
                     onClick={() => setIsOpen(false)}
                     className={`block py-2 text-lg font-medium transition-colors ${
-                      location.pathname === link.path
+                      router.pathname === link.path
                         ? "text-primary"
                         : "text-muted-foreground hover:text-foreground"
                     }`}

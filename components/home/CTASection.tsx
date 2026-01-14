@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -41,13 +41,13 @@ export function CTASection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="group">
-                <Link to="/contact">
+                <Link href="/contact">
                   Get in Touch
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/retailers">Find a Retailer</Link>
+                <Link href="/retailers">Find a Retailer</Link>
               </Button>
             </div>
           </motion.div>

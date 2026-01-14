@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Instagram, Facebook, Mail, Phone } from "lucide-react";
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-4">
+            <Link href="/" className="flex items-center gap-3 mb-4">
               <img src="/luups-logo.png" alt="Luups" className="h-16 w-auto" />
               <div>
                 <span className="font-display text-2xl font-semibold text-foreground block">
@@ -59,7 +59,7 @@ export function Footer() {
               ].map((link) => (
                 <li key={link.path}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}

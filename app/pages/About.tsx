@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { Award, Calendar, Users, Lightbulb } from "lucide-react";
+import { Award, Calendar, Sparkles, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
@@ -31,10 +32,10 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-3xl mx-auto"
           >
             <img
-              src="/lifestyle-dining.jpg"
+              src="/Maj_Toppenberg.jpg"
               alt="Luups products in a dining setting"
               className="w-full rounded-3xl shadow-elevated"
             />
@@ -42,151 +43,172 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Story with Timeline */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <h2 className="font-display text-4xl font-semibold text-foreground mb-8">
-                The Story
-              </h2>
-              <div className="space-y-8">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Calendar className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">2020</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      The Luups Tray was designed with the purpose of supporting a
-                      new and better way of serving and transporting food. The
-                      Luups tray was developed in collaboration with experts from
-                      the restaurant industry and students from DTU (Denmark's
-                      Technical University).
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Award className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">2022</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      The Luups tray received the prestigious Red Dot Design
-                      Award, recognizing its exceptional design quality and
-                      innovation.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">Today</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Luups products are used in canteens, food service sectors,
-                      hotels, and cruise ships across Europe. Our range has
-                      expanded to include trays, plates, bowls, and gastronorm
-                      containers.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Design Philosophy */}
-      <section className="py-24 bg-sage-light/30">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-12 gap-12 max-w-7xl mx-auto">
+            {/* Timeline Sidebar */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="lg:col-span-3"
             >
-              <h2 className="font-display text-4xl font-semibold text-foreground mb-6">
-                Designed with a Unique
-                <br />
-                <span className="text-primary">Appearance & Feeling</span>
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                The Luups products are designed for a circular economy, as it is
-                made from wood and plastic composite, that is both extremely
-                durable as well as recyclable.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Even though the material makes the products feel light, you can
-                still feel that the products are very durable and high quality
-                products.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                All the products can be used in several places. Going on a
-                picnic? The plates are indispensable. Having a garden party? The
-                small tray is perfect for mingling while having drinks and
-                snacks. And when you're done – you just put it in the
-                dishwasher.
-              </p>
+              <div className="sticky top-24">
+                <div className="relative">
+                  {/* Timeline Line */}
+                  <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border" />
+
+                  {/* Timeline Items */}
+                  <div className="space-y-12">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      className="relative"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border-4 border-background shadow-card z-10">
+                          <Calendar className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="pt-1">
+                          <div className="text-2xl font-display font-semibold text-foreground">
+                            2020
+                          </div>
+                          <div className="text-sm text-muted-foreground mt-1">
+                            Design Launch
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.1 }}
+                      className="relative"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border-4 border-background shadow-card z-10">
+                          <Award className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="pt-1">
+                          <div className="text-2xl font-display font-semibold text-foreground">
+                            2022
+                          </div>
+                          <div className="text-sm text-muted-foreground mt-1">
+                            Red Dot Award
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 }}
+                      className="relative"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border-4 border-background shadow-card z-10">
+                          <Sparkles className="h-6 w-6 text-primary" />
+                        </div>
+                        <div className="pt-1">
+                          <div className="text-2xl font-display font-semibold text-foreground">
+                            Today
+                          </div>
+                          <div className="text-sm text-muted-foreground mt-1">
+                            Growing Impact
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
+            {/* Story Content */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="space-y-6"
+              className="lg:col-span-9"
             >
-              {[
-                {
-                  icon: Lightbulb,
-                  title: "Ergonomic",
-                  description:
-                    "Designed to be held in one hand, leaving the other free to handle food.",
-                },
-                {
-                  icon: Award,
-                  title: "Hygienic",
-                  description:
-                    "Smooth surfaces for easy cleaning, suitable for industrial washing.",
-                },
-                {
-                  icon: Users,
-                  title: "Responsible",
-                  description:
-                    "Exceptionally robust, guaranteeing a long lifespan. Made from certified wood.",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex gap-4 p-6 rounded-2xl bg-card shadow-card"
-                >
-                  <div className="flex-shrink-0 p-3 rounded-xl bg-sage-light text-sage-dark">
-                    <item.icon className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+              <h2 className="font-display text-4xl font-semibold text-foreground mb-8">
+                The Story
+              </h2>
+
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
+                <p>
+                  The Luups Tray was designed in 2020 with the purpose of
+                  supporting a new and better way of serving and transporting
+                  food. The Luups tray was developed in collaboration with
+                  experts from the restaurant industry and students from DTU
+                  (Denmarks Technical University).
+                </p>
+
+                <p>
+                  In 2022, the Luups tray received the prestigious Red Dot Design
+                  Award.
+                </p>
+
+                <p>
+                  The design challenges the conventional tray and introduces a
+                  concept that merges behavioral regulation with aesthetics. Our
+                  aim is to mitigate overeating and food waste innovatively.
+                  Canteens and the restaurant industry have particularly sought
+                  a tool to optimize buffet operations, focusing on reducing
+                  food waste and limiting physical contact. Therefore, we have
+                  considered both the purpose of the design and its load-bearing
+                  properties.
+                </p>
+
+                <p>
+                  The Luups tray can be effortlessly carried with one hand,
+                  encouraging mindful decisions about what and how much we place
+                  on it. How can a tray contribute to improved lifestyles in an
+                  environmentally sustainable way? The Luups Tray is
+                  cloud-shaped, featuring specific sections for plates, bowls,
+                  and glasses. This design promotes conscious choices and offers
+                  functionalities beyond those of a typical tray.
+                </p>
+
+                <p>
+                  Our recyclable materials let you carry the tray with a clear
+                  conscience. Available in various colors, the Luups tray,
+                  along with our plates and bowls, offers endless possibilities.
+                  Our mission is to raise awareness and expand into new markets.
+                  We will continue innovating the Luups family, promoting
+                  creativity, healthier lifestyles, and a more sustainable daily
+                  life.
+                </p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="mt-12"
+              >
+                <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
+                  Would you like to join the journey?
+                </h3>
+                <div className="flex flex-wrap gap-4">
+                  <Button asChild size="lg" className="group">
+                    <a href="/contact">
+                      Get in Touch
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" size="lg">
+                    <a href="/products">View Products</a>
+                  </Button>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>

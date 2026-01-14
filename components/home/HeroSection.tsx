@@ -75,11 +75,19 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground group"
+              className="rounded-sm border-none shadow-none group hover:opacity-90 transition-opacity"
+              style={{
+                backgroundColor: "#6B8B67",
+                color: "#EEEEEE",
+              }}
             >
-              <Link to="/products">
+              <Link 
+                to="/products"
+                style={{ color: "#EEEEEE" }}
+                className="flex items-center gap-2 font-medium"
+              >
                 Explore Products
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" style={{ color: "#EEEEEE" }} />
               </Link>
             </Button>
             <Button

@@ -17,14 +17,14 @@ export function HeroSection() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%)",
+              "linear-gradient(to right, rgba(100, 100, 100, 0.6) 0%, rgba(100, 100, 100, 0.4) 50%, rgba(100, 100, 100, 0.2) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, transparent 50%, rgba(0, 0, 0, 0.4) 100%)",
+              "linear-gradient(to bottom, rgba(100, 100, 100, 0.3) 0%, transparent 50%, rgba(100, 100, 100, 0.4) 100%)",
           }}
         />
       </div>

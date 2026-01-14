@@ -11,7 +11,20 @@ export function SustainabilitySection() {
           alt="Sustainable forest"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-charcoal/70" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(100, 100, 100, 0.6) 0%, rgba(100, 100, 100, 0.5) 50%, rgba(100, 100, 100, 0.4) 100%)",
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(100, 100, 100, 0.4) 0%, transparent 50%, rgba(100, 100, 100, 0.5) 100%)",
+          }}
+        />
       </div>
 
       <div className="container relative mx-auto px-6">
@@ -22,17 +35,17 @@ export function SustainabilitySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-display text-4xl md:text-5xl font-semibold text-cream mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-semibold mb-6" style={{ color: "white" }}>
               We Have a Circular
               <br />
-              <span className="text-sage-light">Mindset</span>
+              <span style={{ color: "rgba(255, 255, 255, 0.9)" }}>Mindset</span>
             </h2>
-            <p className="text-lg text-cream/80 leading-relaxed mb-8">
+            <p className="text-lg leading-relaxed mb-8" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
               The Luups products are designed for a circular economy, as it is
               made from wood and plastic composite, that is both extremely
               durable as well as recyclable.
             </p>
-            <p className="text-cream/80 leading-relaxed mb-8">
+            <p className="leading-relaxed mb-8" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
               The robust, reusable material is made from 50% PEFC-certified wood
               from sustainably managed forests and 50% PP plastic. All Luups
               products can be melted and re-shaped into a wide range of new
@@ -66,14 +79,18 @@ export function SustainabilitySection() {
             ].map((item, index) => (
               <div
                 key={item.title}
-                className="flex items-start gap-4 p-6 rounded-2xl bg-cream/10 backdrop-blur-sm border border-cream/20"
+                className="flex items-start gap-4 p-6 rounded-2xl backdrop-blur-sm border"
+                style={{
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  borderColor: "rgba(255, 255, 255, 0.2)"
+                }}
               >
-                <div className="p-3 rounded-xl bg-sage/20 text-sage-light">
+                <div className="p-3 rounded-xl" style={{ backgroundColor: "rgba(122, 139, 114, 0.3)", color: "rgba(255, 255, 255, 0.9)" }}>
                   <item.icon className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-cream mb-1">{item.title}</h3>
-                  <p className="text-cream/70 text-sm">{item.description}</p>
+                  <h3 className="font-semibold mb-1" style={{ color: "white" }}>{item.title}</h3>
+                  <p className="text-sm" style={{ color: "rgba(255, 255, 255, 0.8)" }}>{item.description}</p>
                 </div>
               </div>
             ))}

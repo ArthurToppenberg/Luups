@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Instagram, Facebook } from "lucide-react";
 
@@ -15,7 +17,7 @@ const navLinks = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -42,13 +44,13 @@ export function Header() {
                 key={link.path}
                 href={link.path}
                 className={`relative text-sm font-medium transition-colors hover:text-primary ${
-                  router.pathname === link.path
+                  pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground"
                 }`}
               >
                 {link.name}
-                {router.pathname === link.path && (
+                {pathname === link.path && (
                   <motion.div
                     layoutId="activeNav"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
@@ -115,7 +117,7 @@ export function Header() {
                     href={link.path}
                     onClick={() => setIsOpen(false)}
                     className={`block py-2 text-lg font-medium transition-colors ${
-                      router.pathname === link.path
+                      pathname === link.path
                         ? "text-primary"
                         : "text-muted-foreground hover:text-foreground"
                     }`}

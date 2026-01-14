@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { ExternalLink, MapPin } from "lucide-react";
@@ -61,7 +63,7 @@ const retailers = {
   },
 };
 
-const Retailers = () => {
+export default function Retailers() {
   return (
     <Layout>
       {/* Hero */}
@@ -235,6 +237,4 @@ const Retailers = () => {
       </section>
     </Layout>
   );
-};
-
-export default Retailers;
+}

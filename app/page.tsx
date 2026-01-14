@@ -5,7 +5,7 @@ import { QuoteSection } from "@/components/home/QuoteSection";
 import { SustainabilitySection } from "@/components/home/SustainabilitySection";
 import { CTASection } from "@/components/home/CTASection";
 
-const Index = () => {
+export default function Home() {
   return (
     <Layout>
       <HeroSection />
@@ -15,6 +15,4 @@ const Index = () => {
       <CTASection />
     </Layout>
   );
-};
-
-export default Index;
+}

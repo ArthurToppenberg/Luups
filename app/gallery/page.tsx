@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 
@@ -10,7 +12,7 @@ const galleryImages = [
   { src: "/gallery/stack.png", alt: "Stacked Luups trays" },
 ];
 
-const Gallery = () => {
+export default function Gallery() {
   return (
     <Layout>
       {/* Hero Video Section */}
@@ -93,6 +95,4 @@ const Gallery = () => {
       </section>
     </Layout>
   );
-};
-
-export default Gallery;
+}

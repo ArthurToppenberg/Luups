@@ -1,10 +1,12 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Layout } from "@/components/layout/Layout";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const Contact = () => {
+export default function Contact() {
   return (
     <Layout>
       {/* Hero */}
@@ -157,6 +159,4 @@ const Contact = () => {
       </section>
     </Layout>
   );
-};
-
-export default Contact;
+}

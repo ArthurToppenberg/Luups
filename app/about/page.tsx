@@ -1,10 +1,12 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Layout } from "@/components/layout/Layout";
 import { Award, Calendar, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const About = () => {
+export default function About() {
   return (
     <Layout>
       {/* Hero */}
@@ -216,6 +218,4 @@ const About = () => {
       </section>
     </Layout>
   );
-};
-
-export default About;
+}

@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/Luups",
+  assetPrefix: "/Luups/",
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'www.google.com',
-        pathname: '/s2/favicons/**',
-      },
-    ],
+    unoptimized: true,
   },
 };
 

@@ -5,16 +5,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { useState } from "react";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
-    <>
-    <Analytics/>
-    <SpeedInsights/>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
@@ -22,6 +17,5 @@ export function Providers({ children }: { children: React.ReactNode }) {
         {children}
       </TooltipProvider>
     </QueryClientProvider>
-    </>
   );
 }

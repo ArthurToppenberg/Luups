@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Instagram, Facebook } from "lucide-react";
+import { Img } from "@/components/ui/img";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -25,13 +26,12 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <motion.img
-              src="/luups-logo.png"
-              alt="Luups"
-              className="h-12 w-auto"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
-            />
+            >
+              <Img src="/luups-logo.png" alt="Luups" className="h-12 w-auto" />
+            </motion.div>
             <span className="font-display text-2xl font-semibold tracking-tight text-foreground">
               Luups
             </span>

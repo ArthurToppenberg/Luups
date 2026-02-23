@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
+import { Img } from "@/components/ui/img";
+import { Video } from "@/components/ui/video";
 
 const galleryImages = [
   { src: "/gallery/efterar.jpeg", alt: "" },
@@ -40,7 +42,7 @@ export default function Gallery() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="max-w-5xl mx-auto"
           >
-            <video
+            <Video
               src="/gallery/promo.mov"
               autoPlay
               muted
@@ -49,7 +51,7 @@ export default function Gallery() {
               className="w-full rounded-3xl shadow-elevated"
             >
               Your browser does not support the video tag.
-            </video>
+            </Video>
           </motion.div>
         </div>
       </section>
@@ -81,7 +83,7 @@ export default function Gallery() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-elevated transition-shadow duration-300"
               >
-                <img
+                <Img
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

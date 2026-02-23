@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Layout } from "@/components/layout/Layout";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Img } from "@/components/ui/img";
 
 export default function Contact() {
   return (
@@ -111,7 +112,7 @@ export default function Contact() {
                 transition={{ delay: 0.2 }}
                 className="relative h-full min-h-[500px] rounded-3xl overflow-hidden shadow-2xl"
               >
-                <img
+                <Img
                   src="/luups-logo.png"
                   alt="Luups tableware in a professional setting"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"

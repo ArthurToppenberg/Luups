@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Img } from "@/components/ui/img";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Img
           src="/background.png"
           alt="Luups tableware collection"
           className="w-full h-full object-cover"

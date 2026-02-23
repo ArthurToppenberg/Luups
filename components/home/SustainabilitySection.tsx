@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Leaf, TreeDeciduous, RefreshCw } from "lucide-react";
+import { Img } from "@/components/ui/img";
 
 export function SustainabilitySection() {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Img
           src="/sustainability-forest.jpg"
           alt="Sustainable forest"
           className="w-full h-full object-cover"

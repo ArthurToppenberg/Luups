@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Download, Box, Scale, Ruler, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Img } from "@/components/ui/img";
 import {
   Table,
   TableBody,
@@ -64,7 +65,7 @@ export default function Products() {
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-background/20 to-transparent rounded-3xl z-10" />
-              <img
+              <Img
                 src="/productsDisplay.jpeg"
                 alt="Luups trays stacked"
                 className="w-full rounded-3xl shadow-2xl object-cover h-[400px] lg:h-[500px]"
@@ -136,7 +137,7 @@ export default function Products() {
                           <TableCell className="py-4">
                             <div className="relative h-20 w-20 rounded-md overflow-hidden border border-border bg-white">
                               {product.defaultImage ? (
-                                <img
+                                <Img
                                   src={product.defaultImage}
                                   alt={product.name}
                                   className="h-full w-full object-contain p-1"
@@ -206,7 +207,7 @@ export default function Products() {
                             <div className="flex items-start justify-between mb-4">
                                 <div className="relative h-20 w-20 rounded-lg border border-border bg-white overflow-hidden shrink-0">
                                      {product.defaultImage ? (
-                                        <img src={product.defaultImage} alt={product.name} className="h-full w-full object-contain p-1" />
+                                        <Img src={product.defaultImage} alt={product.name} className="h-full w-full object-contain p-1" />
                                      ) : (
                                         <div className="flex h-full items-center justify-center bg-muted text-[10px]">No Img</div>
                                      )}

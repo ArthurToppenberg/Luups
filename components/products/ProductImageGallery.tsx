@@ -10,6 +10,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Img } from "@/components/ui/img";
 
 interface ProductImageGalleryProps {
   defaultImage: string;
@@ -92,7 +93,7 @@ export const ProductImageGallery = ({
                 transition={{ duration: 0.3 }}
                 className="absolute inset-0"
               >
-                <img
+                <Img
                   src={allImages[selectedIndex]}
                   alt={`${productName} - Image ${selectedIndex + 1}`}
                   className="h-full w-full object-contain p-4"
@@ -142,7 +143,7 @@ export const ProductImageGallery = ({
                         : "border-border opacity-60 hover:opacity-100"
                     }`}
                   >
-                    <img
+                    <Img
                       src={image}
                       alt={`${productName} thumbnail ${index + 1}`}
                       className="h-full w-full object-cover"

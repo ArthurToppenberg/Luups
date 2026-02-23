@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Img } from "@/components/ui/img";
 
 export function CTASection() {
   return (
@@ -17,7 +18,7 @@ export function CTASection() {
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
-            <img
+            <Img
               src="/muslinger.jpeg"
               alt="Luups products in use"
               className="w-full rounded-3xl shadow-elevated"

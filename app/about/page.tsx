@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Layout } from "@/components/layout/Layout";
 import { Award, Calendar, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Img } from "@/components/ui/img";
 
 export default function About() {
   return (
@@ -37,7 +38,7 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <img
+            <Img
               src="/Maj_Toppenberg.jpg"
               alt="Luups products in a dining setting"
               className="w-full rounded-3xl shadow-elevated"

@@ -1,5 +1,5 @@
-import { readdir, writeFile } from "node:fs/promises";
-import { join, extname } from "node:path";
+import { mkdir, readdir, writeFile } from "node:fs/promises";
+import { join, dirname, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
@@ -37,6 +37,7 @@ async function generate() {
     placeholders[key] = `data:image/webp;base64,${buffer.toString("base64")}`;
   }
 
+  await mkdir(dirname(OUTPUT_FILE), { recursive: true });
   await writeFile(
     OUTPUT_FILE,
     JSON.stringify(placeholders, null, 2) + "\n",

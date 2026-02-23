@@ -30,7 +30,13 @@ export function Header() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              <Img src="/luups-logo.png" alt="Luups" className="h-12 w-auto" />
+              <Img
+                src="/luups-logo.png"
+                alt="Luups"
+                width={120}
+                height={48}
+                className="h-12 w-auto"
+              />
             </motion.div>
             <span className="font-display text-2xl font-semibold tracking-tight text-foreground">
               Luups

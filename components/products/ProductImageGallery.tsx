@@ -83,7 +83,7 @@ export const ProductImageGallery = ({
             <span className="sr-only">Close</span>
           </Button>
 
-          <div className="relative flex-1 w-full bg-muted">
+          <div className="relative flex-1 w-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedIndex}
@@ -96,7 +96,8 @@ export const ProductImageGallery = ({
                 <Img
                   src={allImages[selectedIndex]}
                   alt={`${productName} - Image ${selectedIndex + 1}`}
-                  className="h-full w-full object-contain p-4"
+                  fill
+                  className="object-contain p-4"
                 />
               </motion.div>
             </AnimatePresence>
@@ -146,7 +147,8 @@ export const ProductImageGallery = ({
                     <Img
                       src={image}
                       alt={`${productName} thumbnail ${index + 1}`}
-                      className="h-full w-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </button>
                 ))}

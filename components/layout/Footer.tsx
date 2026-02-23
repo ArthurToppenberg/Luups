@@ -10,7 +10,13 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <Img src="/luups-logo.png" alt="Luups" className="h-16 w-auto" />
+              <Img
+                src="/luups-logo.png"
+                alt="Luups"
+                width={120}
+                height={64}
+                className="h-16 w-auto"
+              />
               <div>
                 <span className="font-display text-2xl font-semibold text-foreground block">
                   Luups

@@ -18,11 +18,14 @@ export function CTASection() {
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
-            <Img
-              src="/muslinger.jpeg"
-              alt="Luups products in use"
-              className="w-full rounded-3xl shadow-elevated"
-            />
+            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-elevated">
+              <Img
+                src="/muslinger.jpeg"
+                alt="Luups products in use"
+                fill
+                className="object-cover"
+              />
+            </div>
           </motion.div>
 
           <motion.div

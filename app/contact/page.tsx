@@ -115,7 +115,8 @@ export default function Contact() {
                 <Img
                   src="/luups-logo.png"
                   alt="Luups tableware in a professional setting"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 hover:scale-105"
                 />
               </motion.div>
             </div>

@@ -15,7 +15,10 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "clean": "rimraf node_modules .turbo .next dist"
+    "clean": "rimraf node_modules .turbo .next dist app/lib/blurPlaceholders.json",
+    "generate:blur": "node scripts/generateBlurPlaceholders.mjs",
+    "prebuild": "node scripts/generateBlurPlaceholders.mjs",
+    "postinstall": "node scripts/generateBlurPlaceholders.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -75,6 +78,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.4.0",
     "typescript": "^5"

@@ -83,11 +83,14 @@ export default function Gallery() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-elevated transition-shadow duration-300"
               >
-                <Img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <div className="relative aspect-[4/3] w-full">
+                  <Img
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <p className="text-white font-medium">{image.alt}</p>

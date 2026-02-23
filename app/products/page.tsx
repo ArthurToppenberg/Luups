@@ -62,13 +62,14 @@ export default function Products() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative"
+              className="relative h-[400px] lg:h-[500px] w-full"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-background/20 to-transparent rounded-3xl z-10" />
               <Img
                 src="/productsDisplay.jpeg"
                 alt="Luups trays stacked"
-                className="w-full rounded-3xl shadow-2xl object-cover h-[400px] lg:h-[500px]"
+                fill
+                className="rounded-3xl shadow-2xl object-cover"
               />
             </motion.div>
           </div>
@@ -135,12 +136,13 @@ export default function Products() {
                       {category.products.map((product) => (
                         <TableRow key={product.name} className="group hover:bg-muted/20">
                           <TableCell className="py-4">
-                            <div className="relative h-20 w-20 rounded-md overflow-hidden border border-border bg-white">
+                            <div className="relative h-20 w-20 rounded-md overflow-hidden border border-border">
                               {product.defaultImage ? (
                                 <Img
                                   src={product.defaultImage}
                                   alt={product.name}
-                                  className="h-full w-full object-contain p-1"
+                                  fill
+                                  className="object-contain p-1"
                                 />
                               ) : (
                                 <div className="flex h-full items-center justify-center bg-muted text-xs text-muted-foreground">
@@ -205,9 +207,9 @@ export default function Products() {
                     {category.products.map((product) => (
                         <div key={product.name} className="bg-card rounded-xl shadow-sm p-4 flex flex-col">
                             <div className="flex items-start justify-between mb-4">
-                                <div className="relative h-20 w-20 rounded-lg border border-border bg-white overflow-hidden shrink-0">
+                                <div className="relative h-20 w-20 rounded-lg border border-border overflow-hidden shrink-0">
                                      {product.defaultImage ? (
-                                        <Img src={product.defaultImage} alt={product.name} className="h-full w-full object-contain p-1" />
+                                        <Img src={product.defaultImage} alt={product.name} fill className="object-contain p-1" />
                                      ) : (
                                         <div className="flex h-full items-center justify-center bg-muted text-[10px]">No Img</div>
                                      )}

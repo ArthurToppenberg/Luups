@@ -14,7 +14,8 @@ export function HeroSection() {
         <Img
           src="/background.png"
           alt="Luups tableware collection"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div
           className="absolute inset-0"

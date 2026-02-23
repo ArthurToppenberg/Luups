@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+app/lib/blurPlaceholders.json
 
 # debug
 npm-debug.log*
@@ -42,3 +43,6 @@ next-env.d.ts
 
 # Turborepo
 .turbo
+
+# Generated blur placeholders (regenerated on build)
+app/lib/blurPlaceholders.json

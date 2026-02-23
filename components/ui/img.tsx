@@ -1,11 +1,11 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { AppImage } from "@/components/AppImage";
+import type { ImageProps } from "next/image";
 
-type ImgProps = React.ComponentProps<"img">;
-
-export const Img = ({ src, ...props }: ImgProps) => {
-  const resolvedSrc =
-    typeof src === "string" && src.startsWith("/")
-      ? `${basePath}${src}`
-      : src;
-  return <img src={resolvedSrc} {...props} />;
+type ImgProps = Omit<ImageProps, "src"> & {
+  src: string;
+  width?: number;
+  height?: number;
+  fill?: boolean;
 };
+
+export const Img = (props: ImgProps) => <AppImage unoptimized {...props} />;

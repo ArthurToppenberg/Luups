@@ -38,11 +38,14 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <Img
-              src="/Maj_Toppenberg.jpg"
-              alt="Luups products in a dining setting"
-              className="w-full rounded-3xl shadow-elevated"
-            />
+            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-elevated">
+              <Img
+                src="/Maj_Toppenberg.jpg"
+                alt="Luups products in a dining setting"
+                fill
+                className="object-cover"
+              />
+            </div>
           </motion.div>
         </div>
       </section>

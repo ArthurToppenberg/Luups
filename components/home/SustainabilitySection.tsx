@@ -12,7 +12,8 @@ export function SustainabilitySection() {
         <Img
           src="/sustainability-forest.jpg"
           alt="Sustainable forest"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div
           className="absolute inset-0"

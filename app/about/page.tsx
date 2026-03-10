@@ -38,7 +38,7 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-elevated">
+            <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-elevated">
               <Img
                 src="/Maj_Toppenberg.jpg"
                 alt="Luups products in a dining setting"

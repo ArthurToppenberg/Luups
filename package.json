@@ -16,9 +16,7 @@
     "lint": "biome check",
     "format": "biome format --write",
     "clean": "rimraf node_modules .turbo .next dist app/lib/blurPlaceholders.json",
-    "generate:blur": "node scripts/generateBlurPlaceholders.mjs",
-    "prebuild": "node scripts/generateBlurPlaceholders.mjs",
-    "postinstall": "node scripts/generateBlurPlaceholders.mjs"
+    "prebuild": "node scripts/generateBlurPlaceholders.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -7,7 +7,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const PUBLIC_DIR = join(__dirname, "..", "public");
 const OUTPUT_FILE = join(__dirname, "..", "app", "lib", "blurPlaceholders.json");
 const IMAGE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".webp", ".avif"]);
-const PLACEHOLDER_WIDTH = 16;
+const PLACEHOLDER_WIDTH = 64;
 
 async function getImagePaths(dir, base = "") {
   const entries = await readdir(dir, { withFileTypes: true });
